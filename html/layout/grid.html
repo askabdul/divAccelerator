@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .grid div {
+        border: red 1px solid;
+        height: 100px;
+        width: 100px;
+      }
+
+      .grid::before {
+        content: "pseudo element before";
+      }
+
+      .grid::after {
+        content: "pseudo element after";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div>one</div>
+      <div>two</div>
+      <div>three</div>
+      <div>four</div>
+      <div>five</div>
+    </div>
+  </body>
+</html>
