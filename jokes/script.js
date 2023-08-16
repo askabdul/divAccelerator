@@ -8,7 +8,7 @@ btn.addEventListener('click', () => {
 
 
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     getJoke()
 });
 
@@ -23,6 +23,9 @@ const getJoke = async () => {
     const jokes = await response.json();
 
     jokeEl.innerHTML = jokes.joke;
+
+    // innerHTML, textContent, innerText
+
 
 }
 
